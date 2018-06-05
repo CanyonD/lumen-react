@@ -1,6 +1,6 @@
 const appConstant = {
-    API_URL: 'http://localhost:8000/api/',
-    ROOT_URL: 'http://localhost:8000/#/',
+    API_URL: 'http://192.168.0.171:8080/api/',
+    ROOT_URL: 'http://192.168.0.171:8080/#/',
     // API_URL: 'http://dev.react.com/api/',
     // ROOT_URL: 'http://dev.react.com/#/',
     AUTHORIZATION: 'Authorization',

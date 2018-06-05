@@ -22,7 +22,7 @@ On the command prompt run the following commands:
  $ php artisan jwt:secret
  $ php artisan migrate
  $ php artisan db:seed
- $ php -S localhost:8000 -t public/
+ $ php -S 192.168.0.171:8080 -t public/
  $ npm run watch
 ```
 Credential:
@@ -40,3 +40,15 @@ Credential:
 - JavaScript library for building user interfaces - [React](https://facebook.github.io/react/)
 - Predictable state container - [Redux](http://redux.js.org/)
 - Promise based HTTP client - [Axios](https://github.com/mzabriskie/axios)
+
+## MySQL on Centos7
+$ yum install mariadb-server mariadb
+$ systemctl start mariadb
+$ sudo mysql_secure_installation
+$ mysql -u root -p
+$ CREATE DATABASE `homestead`;
+$ CREATE USER 'homestead' IDENTIFIED BY 'secret';
+$ GRANT USAGE ON *.* TO 'homestead'@localhost IDENTIFIED BY 'secret';
+$ GRANT ALL privileges ON *.* TO 'homestead'@'%';
+$ FLUSH PRIVILEGES;
+$ rpm -Uhv https://rpms.southbridge.ru/rhel7/php-7.2/x86_64/php-mysqlnd-7.2.3-2.el7.remi.x86_64.rpm
